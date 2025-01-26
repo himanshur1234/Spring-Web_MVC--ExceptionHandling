@@ -7,7 +7,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-
 public class MessageController {
 
 	@GetMapping("/welcome")
@@ -26,12 +25,6 @@ public class MessageController {
 		return msg;
 	}
 	
-	@ExceptionHandler(value=ArithmeticException.class)
-	public ModelAndView handleExp(ArithmeticException ex) {
-		
-		ModelAndView mav= new ModelAndView();
-		mav.setViewName("error");
-		return mav;
-	}
+	
 	
 }
